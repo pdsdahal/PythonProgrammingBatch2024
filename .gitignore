@@ -1,0 +1,10 @@
+
+CorePython/.idea/CorePython.iml
+CorePython/.idea/inspectionProfiles/profiles_settings.xml
+CorePython/.idea/misc.xml
+CorePython/.idea/modules.xml
+CorePython/.idea/vcs.xml
+CorePython/OOPConcepts/__pycache__/createclass.cpython-312.pyc
+CorePython/PythonPolymorphism/ducktype/__pycache__/chicken.cpython-312.pyc
+CorePython/PythonPolymorphism/ducktype/__pycache__/duck.cpython-312.pyc
+CorePython/PythonPolymorphism/methodoverriding/__pycache__/animal_parent.cpython-312.pyc
