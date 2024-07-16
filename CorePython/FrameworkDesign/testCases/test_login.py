@@ -2,13 +2,14 @@ import pytest
 
 from FrameworkDesign.pageObjects.login_page import LogInPage
 from FrameworkDesign.utilities.base import BaseClass
+from FrameworkDesign.utilities.readProperties import ReadConfig
 
 
 @pytest.mark.usefixtures("setup")
 class TestLogin(BaseClass):
-    base_url = "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
-    username = "ram@gmail.com"
-    password = "1234"
+    base_url = ReadConfig.get_base_url()
+    username = ReadConfig.get_username()
+    password = ReadConfig.get_password()
 
     def setup_method(self, method):
         self.driver.get(self.base_url)
