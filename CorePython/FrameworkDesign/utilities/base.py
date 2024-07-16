@@ -4,7 +4,7 @@ from selenium import webdriver
 
 class BaseClass:
 
-    @pytest.fixture()
+    @pytest.fixture(scope="class")
     def setup(self, request):
         option = webdriver.ChromeOptions()
         option.add_argument("start-maximized")
