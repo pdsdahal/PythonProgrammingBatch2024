@@ -1,11 +1,9 @@
 import configparser
 import os
 
-cwd = os.getcwd()
-parent = os.path.dirname(p=cwd)
-configparser = configparser.RawConfigParser()
-configparser.read(filenames=parent + "/Configurations/config.ini")
-
+config_file_path = os.path.join(os.path.dirname(__file__), '..', 'Configurations', 'config.ini')
+configparser = configparser.ConfigParser()
+configparser.read(config_file_path)
 
 class ReadConfig:
 
