@@ -15,6 +15,7 @@ class TestHome(BaseClass):
         self.driver.get(self.base_url)
         self.home_page = HomePage(driver=self.driver)
 
+    @pytest.mark.regression
     def test_verify_title_page_home(self):
         self.logger.info("******** Started : test_verify_title_page_home ********")
         try:

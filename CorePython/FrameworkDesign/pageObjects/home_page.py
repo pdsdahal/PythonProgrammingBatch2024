@@ -9,7 +9,7 @@ class HomePage:
     menu_home = (By.LINK_TEXT, "Home")
     menu_blog = (By.LINK_TEXT, "Blog")
     menu_my_account = (By.LINK_TEXT, "My account")
-    submenu_login = (By.LINK_TEXT, "Login")
+    submenu_login = (By.PARTIAL_LINK_TEXT, "Login")
     submenu_register = (By.LINK_TEXT, "Register")
 
     def __init__(self, driver):

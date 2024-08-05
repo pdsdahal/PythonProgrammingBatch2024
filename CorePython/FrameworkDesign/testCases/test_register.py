@@ -24,6 +24,7 @@ class TestRegister(BaseClass):
 
         self.register_page = RegisterPage(self.driver)
 
+    @pytest.mark.regression
     def test_verify_register_title_page(self):
         self.logger.info("******** Started : test_verify_register_title_page ********")
         try:
@@ -36,6 +37,8 @@ class TestRegister(BaseClass):
             self.logger.error("******** Exception occurred in test_verify_register_title_page ********", exc_info=True)
             assert False
 
+    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_verify_register_components_displayed(self):
         self.logger.info("******** Started : test_verify_register_components_displayed ********")
         try:
@@ -57,6 +60,8 @@ class TestRegister(BaseClass):
                               exc_info=True)
             assert False
 
+    @pytest.mark.sanity
+    @pytest.mark.regression
     @pytest.mark.parametrize('firstname,lastname,email,telephone,password,con_password,newsletter',
                              TestUtil.read_excel_data(excel_file_path, 'valid_register'))
     def test_verify_valid_registration(self, firstname, lastname, email, telephone, password, con_password, newsletter):

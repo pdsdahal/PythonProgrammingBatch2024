@@ -1,25 +1,24 @@
-07/17/2024 10:21:58 PM: INFO: ******** Started : test_verify_title_page ********
-07/17/2024 10:21:59 PM: ERROR: ******** Exception occurred in test_verify_title_page ********
+08/05/2024 10:13:06 AM: INFO: ******** Started : test_verify_title_login_page ********
+08/05/2024 10:13:06 AM: INFO: ******** Finished : test_verify_title_login_page (PASSED) ********
+08/05/2024 10:13:13 AM: INFO: ******** Started : test_verify_login_elements_displayed ********
+08/05/2024 10:13:13 AM: INFO: ******** Finished : test_verify_login_elements_displayed (PASSED) ********
+08/05/2024 10:13:20 AM: INFO: ******** Started : test_verify_login_elements_text ********
+08/05/2024 10:13:20 AM: INFO: ******** Finished : test_verify_login_elements_text (PASSED) ********
+08/05/2024 10:13:27 AM: INFO: ******** Started : test_verify_login_with_invalid_credentials ********
+08/05/2024 10:13:30 AM: ERROR: ******** Exception occurred in test_verify_login_with_invalid_credentials ********
 Traceback (most recent call last):
-  File "/Users/sdahal/GitRepos/PythonProgrammingBatch2024/CorePython/FrameworkDesign/testCases/test_login.py", line 26, in test_verify_title_page
-    assert actual_title == 'Account Logdxina', "Title is not as expected!"
-AssertionError: Title is not as expected!
-assert 'Account Login' == 'Account Logdxina'
-  
-  - Account Logdxina
-  ?            --  -
-  + Account Login
-07/17/2024 10:21:59 PM: INFO: ******** Started : test_verify_login_elements_displayed ********
-07/17/2024 10:21:59 PM: INFO: ******** Finished : test_verify_login_elements_displayed (PASSED) ********
-07/17/2024 10:22:00 PM: INFO: ******** Started : test_verify_login_elements_text ********
-07/17/2024 10:22:00 PM: INFO: ******** Finished : test_verify_login_elements_text (PASSED) ********
-07/17/2024 10:22:00 PM: INFO: ******** Started : test_verify_login_with_invalid_credentials ********
-07/17/2024 10:22:03 PM: ERROR: ******** Exception occurred in test_verify_login_with_invalid_credentials ********
-Traceback (most recent call last):
-  File "/Users/sdahal/GitRepos/PythonProgrammingBatch2024/CorePython/FrameworkDesign/testCases/test_login.py", line 68, in test_verify_login_with_invalid_credentials
+  File "/Users/sdahal/GitRepos/PythonProgrammingBatch2024/CorePython/FrameworkDesign/testCases/test_login.py", line 82, in test_verify_login_with_invalid_credentials
     assert self.login_page.get_alert_warning_both_no_match() == exp_warning_msg, "Warning message not as expected for invalid credentials."
 AssertionError: Warning message not as expected for invalid credentials.
 assert 'Warning: You...in in 1 hour.' == 'Warning: No .../or Password.'
   
   - Warning: No match for E-Mail Address and/or Password.
   + Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.
+08/05/2024 10:13:36 AM: INFO: ******** Started : test_verify_register_components_displayed ********
+08/05/2024 10:13:36 AM: INFO: ******** Finished : test_verify_register_components_displayed (PASSED) ********
+08/05/2024 10:13:40 AM: INFO: ******** Started : test_verify_valid_registration ********
+08/05/2024 10:13:40 AM: INFO: ******** Finished : test_verify_valid_registration (PASSED) ********
+08/05/2024 10:13:43 AM: INFO: ******** Started : test_verify_valid_registration ********
+08/05/2024 10:13:43 AM: INFO: ******** Finished : test_verify_valid_registration (PASSED) ********
+08/05/2024 10:13:47 AM: INFO: ******** Started : test_verify_valid_registration ********
+08/05/2024 10:13:47 AM: INFO: ******** Finished : test_verify_valid_registration (PASSED) ********

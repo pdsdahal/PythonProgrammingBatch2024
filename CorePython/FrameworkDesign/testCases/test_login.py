@@ -21,19 +21,22 @@ class TestLogin(BaseClass):
         self.home_page.click_login_menu()
         self.login_page = LogInPage(driver=self.driver)
 
-    def test_verify_title_page(self):
-        self.logger.info("******** Started : test_verify_title_page ********")
+    @pytest.mark.sanity
+    def test_verify_title_login_page(self):
+        self.logger.info("******** Started : test_verify_title_login_page ********")
         try:
             actual_title = self.driver.title
             assert actual_title == 'Account Login', "Title is not as expected!"
-            self.logger.info("******** Finished : test_verify_title_page (PASSED) ********")
+            self.logger.info("******** Finished : test_verify_title_login_page (PASSED) ********")
         except Exception as e:
             img_file_path = os.path.abspath(
-                os.path.join(os.path.dirname(__file__), '..', 'Screenshots', 'test_verify_title_page.jpg'))
+                os.path.join(os.path.dirname(__file__), '..', 'Screenshots', 'test_verify_title_login_page.jpg'))
             self.driver.save_screenshot(img_file_path)
-            self.logger.error("******** Exception occurred in test_verify_title_page ********", exc_info=True)
+            self.logger.error("******** Exception occurred in test_verify_title_login_page ********", exc_info=True)
             assert False
 
+    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_verify_login_elements_displayed(self):
         try:
             self.logger.info("******** Started : test_verify_login_elements_displayed ********")
@@ -50,6 +53,8 @@ class TestLogin(BaseClass):
                                   exc_info=True)
             assert False
 
+    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_verify_login_elements_text(self):
         try:
             self.logger.info("******** Started : test_verify_login_elements_text ********")
@@ -64,6 +69,8 @@ class TestLogin(BaseClass):
                                   exc_info=True)
             assert False
 
+    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_verify_login_with_invalid_credentials(self):
         try:
             self.logger.info("******** Started : test_verify_login_with_invalid_credentials ********")
