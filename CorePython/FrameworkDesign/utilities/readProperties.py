@@ -5,6 +5,7 @@ config_file_path = os.path.join(os.path.dirname(__file__), '..', 'Configurations
 configparser = configparser.ConfigParser()
 configparser.read(config_file_path)
 
+
 class ReadConfig:
 
     @staticmethod
